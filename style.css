@@ -6,4 +6,19 @@ body {
 
 .guestbook-notes {
     font-family: "Comic Sans", sans-serif;
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #777;
+    background-color: #f3f0e8;
+    line-height: 1.4;
+}
+
+.guestbook-notes span {
+    display: block;
+}
+
+.guestbook-notes span + span {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #d0ccc2;
 }
