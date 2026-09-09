@@ -1,6 +1,6 @@
 body {
     max-width: 800px;
-    font-family: Georgia, serif;
+    font-family: "Times New Roman", Times, serif;
     line-height: 1.0;
 }
 
@@ -10,7 +10,7 @@ textarea {
 }
 
 .guestbook-notes {
-    font-family: "Comic Sans", sans-serif;
+    font-family: "Times New Roman", Times, serif;
     margin-top: 2rem;
     padding: 1rem 1.25rem;
     border-left: 4px solid #777;
@@ -71,7 +71,7 @@ img {
     padding: 0.35rem 0.65rem;
     color: white;
     background: transparent;
-    font: 2rem/1 Georgia, serif;
+    font: 2rem/1 "Times New Roman", Times, serif;
     cursor: pointer;
 }
 
