@@ -5,14 +5,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guestbook | My Garden</title>
+    <title>Guestbook</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <p><a href="index.html">Back to home</a></p>
 
 <h1>Guestbook</h1>
-
+<p>Leave a note for the world.  If it's good I might share it.</p>
+<form action="https://formspree.io/f/xqpkwlyd" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required name="name" maxlength="50" required>
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" rows="6" maxlength="500"required></textarea>
+    <button type="submit">Submit</button>
+</form>
 <script src="main.js"></script>
 </body>
 
