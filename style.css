@@ -33,3 +33,61 @@ img {
     height: auto;
 }
 
+.photography-page > img {
+    display: block;
+    max-width: 100%;
+    cursor: zoom-in;
+}
+
+.photo-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: rgba(24, 20, 32, 0.88);
+    cursor: zoom-out;
+}
+
+.photo-lightbox[hidden] {
+    display: none;
+}
+
+.photo-lightbox img {
+    max-width: 94vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    cursor: default;
+}
+
+.photo-lightbox button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: 0;
+    padding: 0.35rem 0.65rem;
+    color: white;
+    background: transparent;
+    font: 2rem/1 Georgia, serif;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .photo-lightbox {
+        padding: 0.5rem;
+    }
+
+    .photo-lightbox img {
+        max-width: 96vw;
+        max-height: 82vh;
+    }
+
+    .photo-lightbox button {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+}
+
