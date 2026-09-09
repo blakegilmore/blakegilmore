@@ -4,6 +4,11 @@ body {
     line-height: 1.0;
 }
 
+input[type="text"],
+textarea {
+    background-color: #e6e2d8;
+}
+
 .guestbook-notes {
     font-family: "Comic Sans", sans-serif;
     margin-top: 2rem;
