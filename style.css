@@ -29,11 +29,7 @@ textarea {
 }
 
 img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
 }
 
-.photo-small {
-    width: 25%;
-    height: auto;
-}
