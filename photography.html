@@ -13,8 +13,21 @@
 
 <h1>Photography</h1>
 <p>A place for my photographs and notes</p>
-<img class="photo-image" src="images/unnamed.jpg" alt="A photograph">
-<script src="main.js"></script>
+<a class="photo-link" href="#enlarged-photo">
+    <img class="photo-image" src="images/unnamed.jpg" alt="A photograph">
+</a>
+<a class="photo-link" href="#enlarged-blue-photo">
+    <img class="photo-image" src="images/bluephoto.JPG" alt="A blue photograph">
+</a>
+
+<div class="photo-lightbox" id="enlarged-photo">
+    <a class="photo-lightbox-backdrop" href="#" aria-label="Close enlarged photograph"></a>
+    <img src="images/unnamed.jpg" alt="A photograph">
+</div>
+<div class="photo-lightbox" id="enlarged-blue-photo">
+    <a class="photo-lightbox-backdrop" href="#" aria-label="Close enlarged blue photograph"></a>
+    <img src="images/bluephoto.JPG" alt="A blue photograph">
+</div>
 </body>
 
 </html>

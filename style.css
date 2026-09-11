@@ -22,6 +22,10 @@ body {
     max-width: 36rem;
 }
 
+.photography-page {
+    background-color: #ffffff;
+}
+
 .home-page h1 {
     margin: 0 0 1rem;
     color: #173f64;
@@ -121,8 +125,13 @@ img {
     height: auto;
 }
 
-.photography-page > img {
+.photography-page > .photo-link {
     display: block;
+    width: min(45%, 320px);
+    margin-bottom: 1.25rem;
+}
+
+.photography-page > .photo-link img {
     width: 100%;
     max-width: 100%;
     cursor: zoom-in;
@@ -132,51 +141,45 @@ img {
     position: fixed;
     inset: 0;
     z-index: 10;
-    display: grid;
-    place-items: center;
+    display: none;
     padding: 1rem;
-    background: rgba(24, 20, 32, 0.88);
-    cursor: zoom-out;
+    background: transparent;
 }
 
-.photo-lightbox[hidden] {
-    display: none;
+.photo-lightbox:target {
+    display: block;
 }
 
 .photo-lightbox img {
+    display: block;
     max-width: 94vw;
     max-height: 90vh;
     width: auto;
     height: auto;
     object-fit: contain;
-    cursor: default;
+    position: relative;
+    z-index: 1;
+    box-shadow: none;
 }
 
-.photo-lightbox button {
+.photo-lightbox-backdrop {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    border: 0;
-    padding: 0.35rem 0.65rem;
-    color: white;
-    background: transparent;
-    font: 2rem/1 "Times New Roman", Times, serif;
-    cursor: pointer;
+    inset: 0;
+    cursor: zoom-out;
 }
 
 @media (max-width: 600px) {
+    .photography-page > .photo-link {
+        width: 75%;
+    }
+
     .photo-lightbox {
         padding: 0.5rem;
     }
 
     .photo-lightbox img {
         max-width: 96vw;
-        max-height: 82vh;
-    }
-
-    .photo-lightbox button {
-        top: 0.5rem;
-        right: 0.5rem;
+        max-height: 96vh;
     }
 }
 
