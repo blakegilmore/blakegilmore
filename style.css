@@ -2,7 +2,7 @@ body {
     max-width: 800px;
     font-family: "Times New Roman", Times, serif;
     line-height: 1.0;
-    background-color: #e34234;
+    background-color: #a8324a;
     color: #f8eceb;
 }
 
@@ -12,7 +12,7 @@ em {
 
 input[type="text"],
 textarea {
-    background-color: #fff1d6;
+    background-color: #f1f7fa;
     font: inherit;
 }
 
@@ -20,7 +20,7 @@ textarea {
     font-family: "Times New Roman", Times, serif;
     margin-top: 2rem;
     padding: 1rem 1.25rem;
-    background-color: #fff1d6;
+    background-color: #f1f7fa;
     color: #2f2025;
     line-height: 1.4;
 }
@@ -32,7 +32,7 @@ textarea {
 .guestbook-notes span + span {
     margin-top: 0.75rem;
     padding-top: 0.75rem;
-    border-top: 1px solid #e4c79b;
+    border-top: 1px solid #d8e7ed;
 }
 
 img {
