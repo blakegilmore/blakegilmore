@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: clamp(2rem, 8vw, 7rem) clamp(1.5rem, 8vw, 8rem);
     overflow: hidden;
-    background-color: #f4ead7;
+    background-color: #ffffff;
 }
 
 .home-content {
@@ -22,33 +22,27 @@ body {
     max-width: 36rem;
 }
 
-.home-kicker {
-    margin: 0 0 1.25rem 0.5rem;
-    color: #205b59;
-    font-size: 0.9rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
 .home-page h1 {
-    margin: 0;
+    margin: 0 0 1rem;
     color: #173f64;
-    font-size: 7rem;
+    font-size: 2em;
     font-weight: normal;
-    line-height: 0.82;
+    line-height: normal;
     letter-spacing: 0;
 }
 
 .home-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem 2rem;
-    margin: 3rem 0 0 0.75rem;
+    margin-left: 0.75rem;
+}
+
+.home-links a {
+    display: block;
+    width: fit-content;
+    margin-bottom: 0.75rem;
 }
 
 .home-links a {
     color: #000000;
-    font-size: 1.25rem;
     text-decoration: none;
     border-bottom: 3px solid #e85d4a;
 }
@@ -69,7 +63,7 @@ body {
     width: clamp(8rem, 19vw, 15rem);
     aspect-ratio: 1;
     border-radius: 46% 54% 52% 48%;
-    background-color: #e4a72c;
+    background-color: #f4c400;
     transform: rotate(12deg);
 }
 
@@ -79,7 +73,7 @@ body {
     width: clamp(8rem, 22vw, 18rem);
     height: clamp(13rem, 34vw, 27rem);
     border-radius: 70% 30% 68% 32%;
-    background-color: #205b59;
+    background-color: #0057b8;
     transform: rotate(34deg);
 }
 
@@ -89,14 +83,8 @@ body {
     width: clamp(5rem, 12vw, 9rem);
     height: clamp(11rem, 26vw, 20rem);
     border-radius: 52% 48% 15% 85%;
-    background-color: #e85d4a;
+    background-color: #e34234;
     transform: rotate(-27deg);
-}
-
-@media (max-width: 600px) {
-    .home-page h1 {
-        font-size: 4rem;
-    }
 }
 
 em {
