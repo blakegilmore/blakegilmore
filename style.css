@@ -2,8 +2,8 @@ body {
     max-width: 800px;
     font-family: "Times New Roman", Times, serif;
     line-height: 1.0;
-    background-color: #0c35f5;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #1d2433;
 }
 
 .home-page {
@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: clamp(2rem, 8vw, 7rem) clamp(1.5rem, 8vw, 8rem);
     overflow: hidden;
-    background-color: #0c35f5;
+    background-color: #ffffff;
 }
 
 .home-content {
@@ -23,12 +23,12 @@ body {
 }
 
 .photography-page {
-    background-color: #0c35f5;
+    background-color: #ffffff;
 }
 
 .home-page h1 {
     margin: 0 0 1rem;
-    color: #ffffff;
+    color: #173f64;
     font-size: 2em;
     font-weight: normal;
     line-height: normal;
@@ -56,14 +56,14 @@ body {
 }
 
 .home-links a {
-    color: #ffffff;
+    color: #173f64;
     text-decoration: none;
-    border-bottom: 3px solid #ffd43b;
+    border-bottom: 3px solid #ff5a36;
 }
 
 .home-links a:hover,
 .home-links a:focus-visible {
-    color: #ffd43b;
+    color: #ff5a36;
 }
 
 .cutout {
@@ -87,7 +87,7 @@ body {
     width: clamp(8rem, 22vw, 18rem);
     height: clamp(13rem, 34vw, 27rem);
     border-radius: 70% 30% 68% 32%;
-    background-color: #ffffff;
+    background-color: #4169e1;
     transform: rotate(34deg);
 }
 
