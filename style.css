@@ -39,9 +39,8 @@ body {
     max-width: 30rem;
     margin: 0 0 2rem 0.75rem;
     padding: 1rem 1.25rem;
-    border-left: 0;
+    border-left: 0.5rem solid #ff5a36;
     color: #14204f;
-    background-color: #ffffff;
     line-height: 1.35;
 }
 
