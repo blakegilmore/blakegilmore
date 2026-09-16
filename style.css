@@ -1,7 +1,9 @@
 body {
-    max-width: 800px;
+    max-width: 42rem;
+    margin: 0;
+    padding: clamp(2rem, 8vw, 7rem) clamp(1.5rem, 8vw, 8rem);
     font-family: "Times New Roman", Times, serif;
-    line-height: 1.0;
+    line-height: 1.5;
     background-color: #ffffff;
     color: #1d2433;
 }
@@ -27,6 +29,7 @@ body {
 }
 
 .home-page {
+    box-sizing: border-box;
     position: relative;
     max-width: none;
     min-height: 100vh;
@@ -212,7 +215,8 @@ img {
 .photo-lightbox img {
     display: block;
     max-width: 94vw;
-    max-height: 90vh;
+    max-height: calc(100dvh - 5rem);
+    margin-top: 3rem;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -227,6 +231,23 @@ img {
     cursor: zoom-out;
 }
 
+.photo-lightbox-close {
+    position: absolute;
+    top: 0.75rem;
+    left: 1rem;
+    z-index: 2;
+    padding: 0.4rem 0.75rem;
+    background: #ffffff;
+    color: #173f64;
+    border: 1px solid #d1d7e2;
+}
+
+input[type="text"],
+textarea {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
 @media (max-width: 600px) {
     .photography-page > .photo-link {
         width: 75%;
@@ -238,7 +259,7 @@ img {
 
     .photo-lightbox img {
         max-width: 96vw;
-        max-height: 96vh;
+        max-height: calc(100dvh - 4rem);
     }
 }
 

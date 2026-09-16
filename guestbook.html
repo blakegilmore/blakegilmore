@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<p><a href="index.html">Back to home</a></p>
+<p><a href="index.html">Back to home</a> &middot; <a href="archive.html">Back to reference guide</a></p>
 
 <h1>Guestbook</h1>
 <p>Leave a very long important message for all of humanity to read</p>
-<form action="https://formspree.io/f/xqpkwlyd" method="POST">
+<p id="guestbook-help">Messages are sent to Blake and added to this page manually, so yours won't appear right away.</p>
+<form action="https://formspree.io/f/xqpkwlyd" method="POST" aria-describedby="guestbook-help">
     <label for="name">Name:</label>
     <input type="text" name="name" id="name" maxlength="50" required>
     <br><br><label for="message">Message:</label>

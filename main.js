@@ -15,3 +15,27 @@ siteFooter.textContent = isHomePage
 
 document.body.prepend(siteHeader);
 document.body.append(siteFooter);
+
+let activePhoto = null;
+
+function syncPhotoLightbox() {
+	const photo = document.querySelector('.photo-lightbox:target');
+	if (photo) {
+		activePhoto = photo;
+		photo.querySelector('.photo-lightbox-close').focus();
+	} else if (activePhoto) {
+		const thumbnail = document.querySelector(`.photo-link[href="#${activePhoto.id}"]`);
+		thumbnail?.focus();
+		activePhoto = null;
+	}
+}
+
+window.addEventListener('hashchange', syncPhotoLightbox);
+document.addEventListener('keydown', (event) => {
+	if (event.key === 'Escape' && document.querySelector('.photo-lightbox:target')) {
+		event.preventDefault();
+		history.replaceState(null, '', window.location.pathname + window.location.search);
+		syncPhotoLightbox();
+	}
+});
+syncPhotoLightbox();
