@@ -82,6 +82,62 @@ body {
     color: #ff5a36;
 }
 
+.archive-content {
+    max-width: 42rem;
+}
+
+.archive-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.archive-featured {
+    margin-top: 0.4rem;
+}
+
+.archive-featured a {
+    color: #173f64;
+    text-decoration: none;
+}
+
+.archive-featured a:hover,
+.archive-featured a:focus-visible {
+    color: #ff5a36;
+}
+
+.archive-section {
+    margin-top: 2rem;
+}
+
+.archive-section h2 {
+    margin: 0 0 0.75rem;
+    color: #173f64;
+    font-size: 0.95rem;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+}
+
+.archive-list {
+    display: grid;
+    gap: 0.5rem;
+    margin-left: 0.75rem;
+}
+
+.archive-list a {
+    display: block;
+    color: #173f64;
+    text-decoration: none;
+    line-height: 1.35;
+}
+
+.archive-list a:hover,
+.archive-list a:focus-visible {
+    color: #ff5a36;
+}
+
 em {
     font-style: normal;
 }
