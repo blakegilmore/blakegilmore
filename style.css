@@ -126,6 +126,10 @@ body {
     margin-left: 0.75rem;
 }
 
+.archive-list-one-column {
+    margin-top: 2rem;
+}
+
 .archive-list a {
     display: block;
     color: #173f64;
