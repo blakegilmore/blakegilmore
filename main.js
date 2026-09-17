@@ -60,4 +60,3 @@ if (archiveOrder) {
 				: 'closest to my heart / most enduring';
 	});
 }
-
