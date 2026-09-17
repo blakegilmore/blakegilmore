@@ -155,6 +155,35 @@ body {
     cursor: pointer;
 }
 
+.archive-sort {
+    margin: 0 0 0.5rem 0.75rem;
+    color: #4a5363;
+    font-size: 0.85rem;
+}
+
+.archive-sort label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.archive-sort select {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 23rem;
+    min-height: 44px;
+    padding: 0.4rem;
+    border: 1px solid #d1d7e2;
+    background: #fff;
+    color: #173f64;
+    font: inherit;
+    font-size: 1rem;
+}
+
+.archive-sort select:focus-visible {
+    outline: 2px solid #173f64;
+    outline-offset: 2px;
+}
+
 .archive-dates-toggle:focus-visible {
     outline: 2px solid #173f64;
     outline-offset: 4px;

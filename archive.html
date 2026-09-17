@@ -14,68 +14,70 @@
         <div>
             <h1>reference guide to blakeworld</h1>
             <p class="home-description">a running archive of things i've loved at some time</p>
-            <p class="archive-ordering-note">ordered by most recent to oldest</p>
+            <p class="archive-ordering-note">closest to my heart / most enduring</p>
         </div>
-        <nav class="archive-featured" aria-label="featured link">
-            <a href="hel-dream.html" data-added="2026-09-16T13:37:05-05:00">hel</a>
-        </nav>
     </div>
 
+    <div class="archive-sort" hidden>
+        <label for="archive-order">organize by</label>
+        <select id="archive-order" aria-controls="archive-entries">
+            <option value="heart">closest to my heart / most enduring</option>
+            <option value="love">date i fell in love with it</option>
+            <option value="date">date added (newest first)</option>
+        </select>
+    </div>
     <button class="archive-dates-toggle" type="button" aria-pressed="false" hidden>show dates entry was added</button>
     <p class="archive-dates-note" hidden>dates reflect the earliest saved record of each entry, in central time.</p>
 
-    <!-- Keep data-added timestamps fixed when editing or reordering entries.
+    <!-- data-love-order preserves the earlier archive's newest-to-oldest order of affection.
+         Leave it unset when an entry's place in that timeline is unknown.
+         Keep data-added timestamps fixed when editing or reordering entries.
          For new entries, record the actual addition time in ISO 8601 format with a timezone offset. -->
-    <nav class="archive-list archive-list-one-column" aria-label="reference guide links">
-        <a href="im-not-bossy-im-the-boss.html" data-added="2026-09-17T09:50:27-05:00">i'm not bossy, i'm the boss, sinéad o'connor</a>
-        <a href="britney-spears.html" data-added="2026-09-16T20:51:45-05:00">britney spears</a>
-        <a href="chappell-roan.html" data-added="2026-09-16T20:51:45-05:00">chappell roan</a>
-        <a href="wuthering-heights.html" data-added="2026-09-16T13:37:05-05:00">wuthering heights, charli xcx</a>
-        <a href="charli-xcx.html" data-added="2026-09-16T14:09:27-05:00">charli xcx</a>
-        <a href="whos-afraid-of-little-old-me.html" data-added="2026-09-17T10:04:13-05:00">who's afraid of little old me?, taylor swift</a>
-        <a href="diane-warren.html" data-added="2026-09-16T13:37:05-05:00">diane warren</a>
-        <a href="heart.html" data-added="2026-09-16T13:37:05-05:00">heart</a>
-        <a href="addams-family-1993.html" data-added="2026-09-16T13:37:05-05:00">addams family values</a>
-        <a href="astrology.html" data-added="2026-09-16T13:59:47-05:00">astrology</a>
-        <a href="whitney-houston.html" data-added="2026-09-16T20:46:02-05:00">national anthem performance, whitney houston</a>
-        <a href="eleven.html" data-added="2026-09-16T13:47:19-05:00">eleven</a>
-        <a href="stranger-things.html" data-added="2026-09-16T13:47:19-05:00">stranger things</a>
-        <a href="cyndi-lauper.html" data-added="2026-09-16T13:37:05-05:00">all through the night (live performance), cyndi lauper</a>
-        <a href="singing.html" data-added="2026-09-16T13:37:05-05:00">singing</a>
-        <a href="interviewing-people-i-admire.html" data-added="2026-09-16T13:37:05-05:00">interviewing people i admire</a>
-        <a href="james-turrell.html" data-added="2026-09-16T13:37:05-05:00">james turrell</a>
-        <a href="making-sound-art.html" data-added="2026-09-16T13:37:05-05:00">making sound art</a>
-        <a href="high-violet.html" data-added="2026-09-16T13:37:05-05:00">high violet, the national</a>
-        <a href="the-suburbs.html" data-added="2026-09-16T13:37:05-05:00">the suburbs, arcade fire</a>
-        <a href="kate-bush.html" data-added="2026-09-16T13:37:05-05:00">kate bush</a>
-        <a href="moonstruck.html" data-added="2026-09-16T14:30:20-05:00">moonstruck</a>
-        <a href="yeah-yeah-yeahs-its-blitz.html" data-added="2026-09-16T13:37:05-05:00">it's blitz, yeah yeah yeahs</a>
-        <a href="radiohead.html" data-added="2026-09-16T13:37:05-05:00">radiohead</a>
-        <a href="avril-lavigne.html" data-added="2026-09-16T14:03:23-05:00">avril lavigne</a>
-        <a href="taking-pictures.html" data-added="2026-09-16T13:37:05-05:00">taking pictures</a>
-        <a href="fleetwood-mac-rumors.html" data-added="2026-09-16T13:37:05-05:00">rumors, fleetwood mac</a>
-        <a href="a-happening-in-central-park.html" data-added="2026-09-17T10:17:36-05:00">a happening in central park, barbra streisand</a>
-        <a href="hello-dolly-soundtrack.html" data-added="2026-09-17T10:17:36-05:00">hello, dolly! (soundtrack), barbra streisand and cast</a>
-        <a href="funny-girl.html" data-added="2026-09-16T13:37:05-05:00">funny girl</a>
-        <a href="cher.html" data-added="2026-09-16T13:37:05-05:00">cher</a>
-        <a href="cher-2003-believe-world-tour.html" data-added="2026-09-16T13:37:05-05:00">living proof: the farewell tour</a>
-        <a href="reading-fiction.html" data-added="2026-09-16T13:37:05-05:00">reading fiction</a>
-        <a href="shania-twain.html" data-added="2026-09-16T14:03:23-05:00">shania twain</a>
-        <a href="morticia-addams.html" data-added="2026-09-16T13:47:19-05:00">morticia addams</a>
-        <a href="addams-family-1991.html" data-added="2026-09-16T13:37:05-05:00">the addams family</a>
-        <a href="cats-musical.html" data-added="2026-09-16T15:10:11-05:00">cats (musical)</a>
-        <a href="falling-into-you.html" data-added="2026-09-16T13:37:05-05:00">falling into you, celine dion</a>
-        <a href="reba-mcentyre.html" data-added="2026-09-16T14:03:23-05:00">reba mcentire</a>
-        <a href="playing-with-my-cats.html" data-added="2026-09-16T15:10:11-05:00">playing with my cats</a>
-        <a href="faith-hill.html" data-added="2026-09-16T14:03:23-05:00">faith hill</a>
-        <a href="introducing-the-unexplored-angle.html" data-added="2026-09-16T13:37:05-05:00">introducing the unexplored angle or unsaid thing</a>
-        <a href="enjoying-my-alone-time.html" data-added="2026-09-16T14:14:23-05:00">enjoying my alone time</a>
-        <a href="being-the-center-of-attention.html" data-added="2026-09-16T14:14:23-05:00">being the center of attention</a>
-        <a href="sebastian-party-gras.html" data-added="2026-09-16T14:58:48-05:00">sebastian: party gras!</a>
-        <a href="fern-gully-the-last-rainforest.html" data-added="2026-09-16T14:58:48-05:00">fern gully: the last rainforest</a>
-        <a href="alices-adventures-in-wonderland.html" data-added="2026-09-16T14:58:48-05:00">alice's adventures in wonderland</a>
-        <a href="modern-dance.html" data-added="2026-09-17T10:20:26-05:00">modern dance</a>
-        <a href="contact-improv.html" data-added="2026-09-17T10:20:26-05:00">contact improv</a>
+    <nav id="archive-entries" class="archive-list archive-list-one-column" aria-label="reference guide links">
+        <a href="playing-with-my-parents-dog.html" data-added="2026-09-17T10:29:53-05:00">playing with my parents&#39; dog</a>
+        <a href="hel-dream.html" data-added="2026-09-16T13:37:05-05:00">hel</a>
+        <a href="introducing-the-unexplored-angle.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="42">introducing the unexplored angle or unsaid thing</a>
+        <a href="modern-dance.html" data-added="2026-09-17T10:20:26-05:00" data-love-order="48">modern dance and contact improv</a>
+        <a href="cher-2003-believe-world-tour.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="32">living proof: the farewell tour</a>
+        <a href="cher.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="31">cher</a>
+        <a href="eleven.html" data-added="2026-09-16T13:47:19-05:00" data-love-order="12">eleven</a>
+        <a href="a-happening-in-central-park.html" data-added="2026-09-17T10:17:36-05:00" data-love-order="28">a happening in central park, barbra streisand</a>
+        <a href="cats-musical.html" data-added="2026-09-16T15:10:11-05:00" data-love-order="37">cats (musical)</a>
+        <a href="morticia-addams.html" data-added="2026-09-16T13:47:19-05:00" data-love-order="35">morticia addams</a>
+        <a href="kate-bush.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="21">kate bush</a>
+        <a href="the-suburbs.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="20">the suburbs, arcade fire</a>
+        <a href="yeah-yeah-yeahs-its-blitz.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="23">it&#39;s blitz, yeah yeah yeahs</a>
+        <a href="radiohead.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="24">radiohead</a>
+        <a href="im-not-bossy-im-the-boss.html" data-added="2026-09-17T09:50:27-05:00" data-love-order="1">i&#39;m not bossy, i&#39;m the boss, sin&#233;ad o&#39;connor</a>
+        <a href="heart.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="8">heart</a>
+        <a href="astrology.html" data-added="2026-09-16T13:59:47-05:00" data-love-order="10">astrology</a>
+        <a href="moonstruck.html" data-added="2026-09-16T14:30:20-05:00" data-love-order="22">moonstruck</a>
+        <a href="funny-girl.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="30">funny girl</a>
+        <a href="james-turrell.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="17">james turrell</a>
+        <a href="wednesday-addams.html" data-added="2026-09-17T10:29:53-05:00">wednesday addams</a>
+        <a href="wuthering-heights.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="4">wuthering heights, charli xcx</a>
+        <a href="britney-spears.html" data-added="2026-09-16T20:51:45-05:00" data-love-order="2">britney spears</a>
+        <a href="charli-xcx.html" data-added="2026-09-16T14:09:27-05:00" data-love-order="5">charli xcx</a>
+        <a href="chappell-roan.html" data-added="2026-09-16T20:51:45-05:00" data-love-order="3">chappell roan</a>
+        <a href="diane-warren.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="7">diane warren</a>
+        <a href="fleetwood-mac-rumors.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="27">rumors, fleetwood mac</a>
+        <a href="whitney-houston.html" data-added="2026-09-16T20:46:02-05:00" data-love-order="11">whitney houston national anthem</a>
+        <a href="stranger-things.html" data-added="2026-09-16T13:47:19-05:00" data-love-order="13">stranger things</a>
+        <a href="cyndi-lauper.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="14">cyndi lauper&#39;s live performance of &quot;all through the night&quot;</a>
+        <a href="singing.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="15">singing</a>
+        <a href="interviewing-people-i-admire.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="16">interviewing people i admire</a>
+        <a href="high-violet.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="19">high violet, the national</a>
+        <a href="avril-lavigne.html" data-added="2026-09-16T14:03:23-05:00" data-love-order="25">avril lavigne</a>
+        <a href="hello-dolly-soundtrack.html" data-added="2026-09-17T10:17:36-05:00" data-love-order="29">hello, dolly! (soundtrack), barbra streisand and cast</a>
+        <a href="falling-into-you.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="38">falling into you, celine dion</a>
+        <a href="reba-mcentyre.html" data-added="2026-09-16T14:03:23-05:00" data-love-order="39">reba mcentire</a>
+        <a href="alices-adventures-in-wonderland.html" data-added="2026-09-16T14:58:48-05:00" data-love-order="47">alice&#39;s adventures in wonderland</a>
+        <a href="making-sound-art.html" data-added="2026-09-16T13:37:05-05:00" data-love-order="18">making sound art</a>
+        <a href="shania-twain.html" data-added="2026-09-16T14:03:23-05:00" data-love-order="34">come on over, shania twain</a>
+        <a href="faith-hill.html" data-added="2026-09-16T14:03:23-05:00" data-love-order="41">take me as I am, faith hill</a>
+        <a href="sebastian-party-gras.html" data-added="2026-09-16T14:58:48-05:00" data-love-order="45">sebastian: party gras!</a>
+        <a href="fern-gully-the-last-rainforest.html" data-added="2026-09-16T14:58:48-05:00" data-love-order="46">fern gully: the last rainforest</a>
+        <a href="playing-with-my-cats.html" data-added="2026-09-16T15:10:11-05:00" data-love-order="40">playing with my cats (they&#39;re long gone)</a>
     </nav>
 </main>
 

@@ -42,6 +42,33 @@ syncPhotoLightbox();
 
 const datesToggle = document.querySelector('.archive-dates-toggle');
 
+const archiveOrder = document.querySelector('#archive-order');
+if (archiveOrder) {
+	const archiveList = document.querySelector('#archive-entries');
+	// The HTML order is Blake's ranking; keep it when dates tie, too.
+	const heartOrder = Array.from(archiveList.children);
+	archiveOrder.value = 'heart';
+	document.querySelector('.archive-sort').hidden = false;
+	archiveOrder.addEventListener('change', () => {
+		const byDate = archiveOrder.value === 'date';
+		const ordered = [...heartOrder];
+		if (byDate) {
+			ordered.sort((a, b) =>
+				(Date.parse(b.dataset.added) || 0) - (Date.parse(a.dataset.added) || 0));
+		} else if (archiveOrder.value === 'love') {
+			ordered.sort((a, b) =>
+				(Number(a.dataset.loveOrder) || Number.MAX_SAFE_INTEGER)
+				- (Number(b.dataset.loveOrder) || Number.MAX_SAFE_INTEGER));
+		}
+		archiveList.append(...ordered);
+		document.querySelector('.archive-ordering-note').textContent = byDate
+			? 'ordered by date added, newest first'
+			: archiveOrder.value === 'love'
+				? 'when i fell in love with it, newest to oldest; entries not yet placed in this timeline appear at the end'
+				: 'closest to my heart / most enduring';
+	});
+}
+
 if (datesToggle) {
 	const dateFormat = new Intl.DateTimeFormat('en-US', {
 		timeZone: 'America/Chicago',
