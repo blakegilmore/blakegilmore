@@ -39,3 +39,37 @@ document.addEventListener('keydown', (event) => {
 	}
 });
 syncPhotoLightbox();
+
+const datesToggle = document.querySelector('.archive-dates-toggle');
+
+if (datesToggle) {
+	const dateFormat = new Intl.DateTimeFormat('en-US', {
+		timeZone: 'America/Chicago',
+		month: 'short', day: 'numeric', year: 'numeric',
+		hour: 'numeric', minute: '2-digit', timeZoneName: 'short',
+	});
+	const dateLabels = [];
+	document.querySelectorAll('.archive-content nav a').forEach((link) => {
+		const date = new Date(link.dataset.added || '');
+		const validDate = !Number.isNaN(date.getTime());
+		const label = document.createElement(validDate ? 'time' : 'span');
+		label.className = 'archive-entry-date';
+		label.hidden = true;
+		if (validDate) {
+			label.dateTime = link.dataset.added;
+			label.textContent = dateFormat.format(date).toLowerCase();
+		} else {
+			label.textContent = 'date not recorded';
+		}
+		link.append(label);
+		dateLabels.push(label);
+	});
+	datesToggle.hidden = false;
+	datesToggle.addEventListener('click', () => {
+		const showDates = datesToggle.getAttribute('aria-pressed') !== 'true';
+		datesToggle.setAttribute('aria-pressed', String(showDates));
+		datesToggle.textContent = showDates ? 'hide dates' : 'show dates entry was added';
+		document.querySelector('.archive-dates-note').hidden = !showDates;
+		dateLabels.forEach((label) => { label.hidden = !showDates; });
+	});
+}
