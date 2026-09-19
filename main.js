@@ -30,13 +30,6 @@ if (birthdayBanner) {
 	}
 	document.addEventListener('visibilitychange', updateBirthdayVisibility);
 	updateBirthdayVisibility();
-	const pauseButton = birthdayBanner.querySelector('.birthday-pause');
-	pauseButton.hidden = false;
-	pauseButton.addEventListener('click', () => {
-		const paused = birthdayBanner.classList.toggle('is-paused');
-		pauseButton.setAttribute('aria-pressed', String(paused));
-		pauseButton.textContent = paused ? 'play banner' : 'pause banner';
-	});
 }
 
 let activePhoto = null;

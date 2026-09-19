@@ -28,23 +28,6 @@
     white-space: nowrap;
 }
 
-.birthday-banner.is-paused .birthday-track {
-    animation-play-state: paused;
-}
-
-.birthday-pause {
-    min-height: 44px;
-    margin: 0.25rem 0.75rem 0;
-    padding: 0.25rem 0.5rem;
-    border: 0;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    font-size: 0.8rem;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
 @keyframes birthday-scroll {
     to { transform: translateX(-50%); }
 }
@@ -61,8 +44,7 @@
         white-space: normal;
     }
 
-    .birthday-track span + span,
-    .birthday-pause {
+    .birthday-track span + span {
         display: none;
     }
 }
