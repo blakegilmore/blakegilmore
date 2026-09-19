@@ -18,6 +18,18 @@ document.body.append(siteFooter);
 
 const birthdayBanner = document.querySelector('.birthday-banner');
 if (birthdayBanner) {
+	const birthdayEnds = Date.parse('2026-09-20T00:00:00-05:00');
+	function updateBirthdayVisibility() {
+		if (Date.now() >= birthdayEnds) {
+			birthdayBanner.remove();
+			document.removeEventListener('visibilitychange', updateBirthdayVisibility);
+		} else {
+			birthdayBanner.hidden = false;
+			setTimeout(updateBirthdayVisibility, Math.min(birthdayEnds - Date.now(), 2147483647));
+		}
+	}
+	document.addEventListener('visibilitychange', updateBirthdayVisibility);
+	updateBirthdayVisibility();
 	const pauseButton = birthdayBanner.querySelector('.birthday-pause');
 	pauseButton.hidden = false;
 	pauseButton.addEventListener('click', () => {
