@@ -16,6 +16,17 @@ siteFooter.textContent = isHomePage
 document.body.prepend(siteHeader);
 document.body.append(siteFooter);
 
+const birthdayBanner = document.querySelector('.birthday-banner');
+if (birthdayBanner) {
+	const pauseButton = birthdayBanner.querySelector('.birthday-pause');
+	pauseButton.hidden = false;
+	pauseButton.addEventListener('click', () => {
+		const paused = birthdayBanner.classList.toggle('is-paused');
+		pauseButton.setAttribute('aria-pressed', String(paused));
+		pauseButton.textContent = paused ? 'play banner' : 'pause banner';
+	});
+}
+
 let activePhoto = null;
 
 function syncPhotoLightbox() {
