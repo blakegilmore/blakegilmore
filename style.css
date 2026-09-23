@@ -1,3 +1,77 @@
+/* Temporary construction screen; controlled by UNDER_CONSTRUCTION in main.js. */
+body.construction-mode {
+    overflow: hidden;
+}
+
+body.construction-mode > :not(.construction-screen) {
+    display: none !important;
+}
+
+.construction-screen {
+    box-sizing: border-box;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(1.5rem, 5vw, 4rem);
+    background: radial-gradient(ellipse at 50% 45%, #fffdf8 0%, #f3eee5 75%);
+    color: #283d3a;
+    text-align: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+}
+
+.construction-brand {
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+}
+
+.construction-message {
+    margin-block: auto;
+    padding-block: 3rem;
+    width: 100%;
+}
+
+.construction-eyebrow {
+    margin: 0 0 1.75rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.65rem;
+    line-height: 1.5;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #626d62;
+}
+
+.construction-screen h1 {
+    margin: 0;
+    color: inherit;
+    font-size: clamp(2.3rem, 9vw, 8rem);
+    font-weight: normal;
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+}
+
+.construction-screen h1 em {
+    font-style: italic;
+    color: #6d735b;
+}
+
+.construction-description {
+    margin: 2rem 0 0;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    line-height: 1.7;
+    color: #626d62;
+}
+
+.construction-signoff {
+    margin: 0;
+    font-size: 1rem;
+    font-style: italic;
+    color: #626d62;
+}
+
 /* Temporary homepage birthday banner. */
 .birthday-banner {
     margin: 0 0 2rem;

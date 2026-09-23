@@ -1,3 +1,6 @@
+// Set to false to reveal the existing site again.
+const UNDER_CONSTRUCTION = true;
+
 const siteHeader = document.createElement('header');
 const siteTitle = document.createElement('a');
 const siteFooter = document.createElement('footer');
@@ -75,4 +78,25 @@ if (archiveOrder) {
 				? 'when i fell in love with it, newest to oldest; entries not yet placed in this timeline appear at the end'
 				: 'closest to my heart / most enduring';
 	});
+}
+
+if (UNDER_CONSTRUCTION) {
+    const screen = document.createElement('main');
+    screen.className = 'construction-screen';
+    screen.setAttribute('aria-labelledby', 'construction-title');
+    screen.innerHTML = `
+        <div class="construction-brand">blakeworld</div>
+        <div class="construction-message">
+            <p class="construction-eyebrow">a little time to grow</p>
+            <h1 id="construction-title">under<br><em>construction</em></h1>
+            <p class="construction-description">something personal is taking shape.<br>please come back soon.</p>
+        </div>
+        <p class="construction-signoff">with love, blake</p>
+    `;
+    for (const child of document.body.children) {
+        child.inert = true;
+        child.setAttribute('aria-hidden', 'true');
+    }
+    document.body.classList.add('construction-mode');
+    document.body.append(screen);
 }
